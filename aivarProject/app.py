@@ -378,6 +378,14 @@ if "systems" not in st.session_state:
     st.session_state.systems = []
 if "extraction_done" not in st.session_state:
     st.session_state.extraction_done = False
+if "automation_results" not in st.session_state:
+    st.session_state.automation_results = {}
+if "automation_request" not in st.session_state:
+    st.session_state.automation_request = ""
+if "blueprint_data" not in st.session_state:
+    st.session_state.blueprint_data = {}
+if "blueprint_json" not in st.session_state:
+    st.session_state.blueprint_json = "{}"
 
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
@@ -416,7 +424,16 @@ with st.sidebar:
 
     st.markdown("---")
     st.markdown(
-        "<small style='color:#475569;'>Discovery Agent v1.0 · Aivar Challenge</small>",
+        "<small style='color:#facc15;'>🔧 Level 2 Available: Open the Automation Analyzer page to identify automation opportunities between discovered systems.</small>",
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        "<small style='color:#facc15;'>🏗️ Level 3 Available: Use the Integration Blueprint page to generate comprehensive integration architectures and implementation plans.</small>",
+        unsafe_allow_html=True,
+    )
+    st.markdown("---")
+    st.markdown(
+        "<small style='color:#475569;'>Discovery Agent v3.0 · Aivar Challenge</small>",
         unsafe_allow_html=True,
     )
 
